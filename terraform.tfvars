@@ -8,9 +8,8 @@ vsphere_datacenter = "VMware Datacenter"
 vsphere_host = "mtlesx50003.vmware.cloud"
 vsphere_compute_cluster = "Compute"
 vsphere_datastore1 = "vsanDatastore"
-#vsphere_datastore2 = "datastore2"
-#vsphere_datastore3 = "datastore3"
 vsphere_network = "ls-app-172-27-20-0"
+vm_folder = "Application"
 
 #VM
 vm_template_name = "ubuntu-jammy-22.04-cloudimg"

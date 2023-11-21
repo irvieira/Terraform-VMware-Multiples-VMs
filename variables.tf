@@ -30,14 +30,9 @@ variable "vsphere_datastore1" {
   description = "Datastore in which the virtual machine will be deployed"
 }
 
-#variable "vsphere_datastore2" {
-#  description = "Datastore in which the virtual machine will be deployed"
-#}
-
-#variable "vsphere_datastore3" {
-#  description = "Datastore in which the virtual machine will be deployed"
-#}
-
+variable "vm_folder" {
+  description = "Folder in which the virtual machine will be deployed"
+}
 
 variable "vsphere_network" {
   description = "Portgroup to which the virtual machine will be connected"

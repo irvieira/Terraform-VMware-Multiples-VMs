@@ -26,16 +26,6 @@ data "vsphere_datastore" "datastore1" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
-#data "vsphere_datastore" "datastore2" {
-#  name			= var.vsphere_datastore2
-#  datacenter_id = data.vsphere_datacenter.dc.id
-#}
-
-#data "vsphere_datastore" "datastore3" {
-#  name			= var.vsphere_datastore3
-#  datacenter_id = data.vsphere_datacenter.dc.id
-#}
-
 # Retrieve network information on vsphere
 data "vsphere_network" "network" {
   name          = var.vsphere_network
@@ -51,7 +41,7 @@ data "vsphere_virtual_machine" "template" {
 resource "vsphere_virtual_machine" "vm" {
   for_each 		= var.vms
 
-  folder = "Application"
+  folder = var.vm_folder
   datastore_id		= data.vsphere_datastore.datastore1.id
   resource_pool_id	= data.vsphere_compute_cluster.compute_cluster.resource_pool_id
   guest_id		= var.vm_guest_id
